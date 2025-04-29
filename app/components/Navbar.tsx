@@ -40,7 +40,7 @@ export default function Navbar() {
         `}
       >
         {/* Logo in fixed navbar */}
-        <div className="transition-transform duration-300">
+        <div className="transition-transform duration-300 ">
           <Link href={"/"}>
             <Image
               src="/images/logo.png"
@@ -64,7 +64,7 @@ export default function Navbar() {
       </nav>
 
       {/* Original navbar that shows at the top of the page */}
-      <nav className="flex flex-row justify-between items-center w-full pb-10">
+      <nav className="flex flex-row justify-between items-center w-full pb-10 z-50">
         {/* Logo - Responsive sizing */}
 
         <Link href="/">

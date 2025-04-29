@@ -18,18 +18,22 @@ Recording Alchemy provides educational resources and community support to help a
 
 ## Tech Stack
 
-- **Framework**: Next.js
-- **Styling**: Tailwind CSS
-- **Animation**: CSS Transitions/Tailwind
+- **Framework**: Next.js 15.3.1 with Turbopack
+- **Frontend**: React 19 with TypeScript
+- **Styling**: Tailwind CSS v4
+- **Animation**: Framer Motion & CSS Transitions
+- **Carousels**: Embla Carousel with autoplay
+- **Utility Libraries**: clsx & tailwind-merge
 - **UI Components**: Custom-built component library
 - **Form Handling**: Native React state
+- **Type Checking**: TypeScript 5
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js 18+ (LTS recommended)
-- npm or yarn
+- pnpm (recommended package manager)
 
 ### Installation
 
@@ -46,7 +50,7 @@ Recording Alchemy provides educational resources and community support to help a
    pnpm install
    ```
 
-3. Run the development server:
+3. Run the development server with Turbopack:
 
    ```bash
    pnpm run dev
@@ -62,17 +66,20 @@ Recording Alchemy provides educational resources and community support to help a
 recording-alchemy/
 ├── app/                     # Next.js app router
 │   ├── components/          # Shared components
+│   │   ├── ui/              # UI components
+│   │   └── ...              # Section components
 │   ├── lib/                 # Utility functions
 │   ├── page.tsx             # Homepage
 │   ├── layout.tsx           # Root layout
-│   └── not-found.tsx        # 404 page
-│   └── terms-and-conditions/ $ page
+│   ├── not-found.tsx        # 404 page
+│   └── terms-and-conditions/ # Terms and conditions page
 ├── public/                  # Static assets
 │   └── images/              # Image assets
 ├── styles/                  # Global styles
 ├── .gitignore
 ├── next.config.js
 ├── package.json
+├── tsconfig.json            # TypeScript configuration
 ├── README.md
 └── tailwind.config.js
 ```
@@ -85,11 +92,12 @@ recording-alchemy/
 
 ### Styling Approach
 
-The project uses Tailwind CSS with custom extensions:
+The project uses Tailwind CSS v4 with custom extensions:
 
 - Custom color palette with gold gradients
 - Responsive design utilities
 - Component-specific custom classes
+- Class utilities management with clsx and tailwind-merge
 
 ## Component Library
 
@@ -102,10 +110,21 @@ The project uses Tailwind CSS with custom extensions:
 
 ### Section Components
 
-- **RealStoriesVideos**: Video testimonials carousel
+- **RealStoriesVideos**: Video testimonials carousel with Embla Carousel
 - **CoursePricingSection**: Pricing options and packages
 - **CommunityForm**: Email signup and community connection
 - **DownloadForm**: Lead generation for free resources
+
+### Animation Strategy
+
+The project uses Framer Motion for complex animations and transitions, with simpler animations handled by Tailwind's transition utilities. This provides a smooth user experience while maintaining performance.
+
+## Scripts
+
+- `pnpm dev` - Start development server with Turbopack
+- `pnpm build` - Build for production
+- `pnpm start` - Start production server
+- `pnpm lint` - Run ESLint
 
 ## Contact
 

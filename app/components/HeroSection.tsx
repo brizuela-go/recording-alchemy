@@ -1,18 +1,35 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Navbar from "./Navbar";
 import SignUpButton from "./ui/sign-up-button";
 import DownloadForm from "./DownloadForm";
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col items-stretch justify-between min-h-screen w-full relative px-5 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-10 md:py-12 lg:py-16 bg-hero-gradient bg-cover bg-center bg-no-repeat">
+    <section className="flex flex-col items-stretch justify-between min-h-screen w-full relative px-5 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-10 md:py-12 lg:py-16 bg-black overflow-hidden">
+      {/* Background Image with Next.js Image component */}
+      <div className="absolute inset-0 overflow-hidden">
+        <Image
+          src="/images/hero-bg.png"
+          alt="Recording studio background"
+          fill
+          priority
+          quality={20}
+          sizes="100vw"
+          className="object-cover lg:object-contain object-top"
+          style={{ opacity: 0.47 }}
+        />
+        {/* Dark overlay for gradient effect */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent from-[82.52%] to-black to-100%"></div>
+      </div>
+
       {/* Navbar */}
       <Navbar />
 
       {/* Main Content - Aligned with logo Y axis */}
-      <div className="w-full flex flex-col items-start  mx-auto z-10 pt-0 lg:pt-8 lg:mt-40">
+      <div className="w-full flex flex-col items-start mx-auto z-10 pt-0 lg:pt-8 mt-40">
         {/* Hero Title */}
         <h1 className="font-cinzel text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-[150%] tracking-tight lg:tracking-[-2.425px] uppercase text-white">
           <span>Unlock Your </span>
