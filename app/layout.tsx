@@ -29,14 +29,7 @@ export const metadata: Metadata = {
     description:
       "Unlock Your Voice, Transform Your Sound. I've helped artists break through their creative blocks, record their first songs, and finally hear their music the way they've always imagined it.",
     url: "https://recording-alchemy.vercel.app/",
-    images: [
-      {
-        url: "https://recording-alchemy.vercel.app/images/og.png",
-        width: 1200,
-        height: 630,
-        alt: "Recording Alchemy - Jamin Dillen",
-      },
-    ],
+    images: ["https://recording-alchemy.vercel.app/images/og.png"],
     siteName: "Recording Alchemy",
   },
 };
