@@ -28,10 +28,10 @@ export const metadata: Metadata = {
     title: "Recording Alchemy - Jamin Dillen",
     description:
       "Unlock Your Voice, Transform Your Sound. I've helped artists break through their creative blocks, record their first songs, and finally hear their music the way they've always imagined it.",
-    url: "https://recordingalchemy.com",
+    url: "https://recording-alchemy.vercel.app/",
     images: [
       {
-        url: "https://recordingalchemy.com/og.png",
+        url: "https://recording-alchemy.vercel.app/og.png",
         width: 1200,
         height: 630,
         alt: "Recording Alchemy - Jamin Dillen",
