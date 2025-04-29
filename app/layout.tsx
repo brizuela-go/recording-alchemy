@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://recording-alchemy.vercel.app/",
     images: [
       {
-        url: "https://recording-alchemy.vercel.app/og.png",
+        url: "https://recording-alchemy.vercel.app/images/og.png",
         width: 1200,
         height: 630,
         alt: "Recording Alchemy - Jamin Dillen",
