@@ -21,15 +21,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Recording Alchemy - Jamin Dillen",
+  title: "Recording Alchemy by Jamin Van Dillen",
   description:
     "Unlock Your Voice, Transform Your Sound. I've helped artists break through their creative blocks, record their first songs, and finally hear their music the way they've always imagined it.",
   openGraph: {
-    title: "Recording Alchemy - Jamin Dillen",
+    title: "Recording Alchemy by Jamin Van Dillen",
     description:
       "Unlock Your Voice, Transform Your Sound. I've helped artists break through their creative blocks, record their first songs, and finally hear their music the way they've always imagined it.",
-    url: "https://recording-alchemy.vercel.app",
-    images: ["https://recording-alchemy.vercel.app/images/og.png"],
+    url: "https://www.recordingalchemy.com/",
+    images: ["https://www.recordingalchemy.com/og.png"],
     siteName: "Recording Alchemy",
   },
 };

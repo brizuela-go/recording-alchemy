@@ -2,7 +2,7 @@
 
 A professional platform for musicians and producers to learn recording, mixing, and mastering techniques through courses, templates, and community support.
 
-![Recording Alchemy](public/images/og.png)
+![Recording Alchemy](public/og.png)
 
 ## Overview
 
