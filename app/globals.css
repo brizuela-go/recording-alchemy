@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+}
+
+/* Hero Section Styles */
+.bg-hero-gradient {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 82.52%, #000 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.53) 0%, rgba(0, 0, 0, 0.53) 100%),
+    url("/images/hero-bg.png") black 50% / contain no-repeat;
+  background-position: top center;
+}
+
+@media (max-width: 1279px) {
+  .bg-hero-gradient {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 82.52%, #000 100%),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.53) 0%, rgba(0, 0, 0, 0.53) 100%),
+      url("/images/hero-bg.png") black 50% / cover no-repeat;
+  }
+}
+
+.text-gradient {
+  background: linear-gradient(
+    180deg,
+    #bc8431 0%,
+    #ecc777 0%,
+    #fef7df 0%,
+    #ecc777 0%,
+    #bc8431 0%,
+    #ecc777 0%,
+    #fef7df 7.25%,
+    #ecc777 23.05%,
+    #bc8431 28.76%,
+    #ecc777 34.57%,
+    #fef7df 53.11%,
+    #ecc777 64.72%,
+    #bc8431 79.76%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-download-gradient {
+  background: linear-gradient(
+    270deg,
+    #fbdda3 0%,
+    #e3b887 25%,
+    #fbdda3 50%,
+    #e3b887 75%,
+    #a87740 100%
+  );
+}
+
+/* Font Classes */
+.font-cinzel {
+  font-family: var(--font-cinzel), serif;
+}
+
+.font-sans {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
 }

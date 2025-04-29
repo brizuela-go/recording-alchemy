@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Recording Alchemy
+
+A professional platform for musicians and producers to learn recording, mixing, and mastering techniques through courses, templates, and community support.
+
+![Recording Alchemy](public/images/og.png)
+
+## Overview
+
+Recording Alchemy provides educational resources and community support to help artists confidently record, mix, and master their own music. The platform offers various membership options, downloadable resources, and live coaching sessions.
+
+## Features
+
+- 🎵 **Course Offerings**: Group coaching, 1-on-1 sessions, and in-studio experiences
+- 🎚️ **Educational Resources**: Vocal chain templates, mixing guides, and production techniques
+- 👥 **Community Support**: Access to Discord community for feedback and collaboration
+- 🎓 **Live Sessions**: Weekly Zoom calls, demos, and Q&A sessions
+- 📱 **Responsive Design**: Fully responsive across all devices
+
+## Tech Stack
+
+- **Framework**: Next.js
+- **Styling**: Tailwind CSS
+- **Animation**: CSS Transitions/Tailwind
+- **UI Components**: Custom-built component library
+- **Form Handling**: Native React state
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18+ (LTS recommended)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/brizuela-go/recording-alchemy.git
+   cd recording-alchemy
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   pnpm install
+   ```
+
+3. Run the development server:
+
+   ```bash
+   pnpm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the site.
+
+## Development Workflow
+
+### File Structure
+
+```
+recording-alchemy/
+├── app/                     # Next.js app router
+│   ├── components/          # Shared components
+│   ├── lib/                 # Utility functions
+│   ├── page.tsx             # Homepage
+│   ├── layout.tsx           # Root layout
+│   └── not-found.tsx        # 404 page
+│   └── terms-and-conditions/ $ page
+├── public/                  # Static assets
+│   └── images/              # Image assets
+├── styles/                  # Global styles
+├── .gitignore
+├── next.config.js
+├── package.json
+├── README.md
+└── tailwind.config.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Key Components
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **UI Components**: Reusable interface elements (buttons, forms, cards)
+- **Section Components**: Larger page sections (hero, features, pricing)
+- **Layout Components**: Page structure elements (navbar, footer)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Styling Approach
 
-## Learn More
+The project uses Tailwind CSS with custom extensions:
 
-To learn more about Next.js, take a look at the following resources:
+- Custom color palette with gold gradients
+- Responsive design utilities
+- Component-specific custom classes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Component Library
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Base Components
 
-## Deploy on Vercel
+- **GoldGradientText**: Text with signature gold gradient styling
+- **PricingButton**: Call-to-action button for pricing sections
+- **DurationTab**: Interactive tabs for selecting subscription durations
+- **FeatureItem**: List items for feature sections
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Section Components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **RealStoriesVideos**: Video testimonials carousel
+- **CoursePricingSection**: Pricing options and packages
+- **CommunityForm**: Email signup and community connection
+- **DownloadForm**: Lead generation for free resources
+
+## Contact
+
+Jamin - [jamin@recordingalchemy.com](mailto:jamin@recordingalchemy.com)
+
+Project Link: [https://github.com/brizuela-go/recording-alchemy](https://github.com/brizuela-go/recording-alchemy)
