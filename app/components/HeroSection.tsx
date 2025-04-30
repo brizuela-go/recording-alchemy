@@ -29,7 +29,7 @@ export default function HeroSection() {
       <Navbar />
 
       {/* Main Content - Aligned with logo Y axis */}
-      <div className="w-full flex flex-col items-start mx-auto z-10 pt-0 lg:pt-8 mt-40">
+      <div className="w-full flex flex-col items-start mx-auto z-10 pt-0 lg:pt-8 mt-52">
         {/* Hero Title */}
         <h1 className="font-cinzel text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-[150%] tracking-tight lg:tracking-[-2.425px] uppercase text-white">
           <span>Unlock Your </span>
