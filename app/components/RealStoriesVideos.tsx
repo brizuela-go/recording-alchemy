@@ -15,7 +15,7 @@ type VideoTestimonial = {
 // Custom play button component with golden gradient
 const PlayButton = () => (
   <div className="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-    <div className="relative w-[86px] h-[86px]">
+    <div className="relative w-[66px] h-[66px]">
       {/* Outer circle with gradient */}
       <div
         className="absolute inset-0 rounded-full opacity-50"
@@ -45,11 +45,11 @@ export default function RealStoriesVideos() {
   // Video testimonials data
   const videoTestimonials: VideoTestimonial[] = [
     {
-      name: "DAVE MUTNER",
-      title: "Singer",
-      videoThumbnail: "/images/testimonials/Dave-Mutner.png",
+      name: "ANDRE SNOWDEN",
+      title: `R&B Singer`,
+      videoThumbnail: "/images/testimonials/Andre-Snowden.png",
       videoUrl:
-        "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZIKuVZ23pgWyNFgZvhnSX7qrmDUlVTGbzEjsJ1",
+        "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZInUadm4TOEO3u2yHzoKwB5lckbj0PsIATZqF6",
     },
     {
       name: "NUMINOUS THE BARD",
@@ -59,18 +59,32 @@ export default function RealStoriesVideos() {
         "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZIsOr9IObMAEN48Y3Uiy6lF1m2pRjLq7wrZfua",
     },
     {
-      name: "ANDRE SNOWDEN",
-      title: `R&B Singer`,
-      videoThumbnail: "/images/video-thumb-3.jpg",
+      name: "DAVE MUTNER",
+      title: "Singer",
+      videoThumbnail: "/images/testimonials/Dave-Mutner.png",
       videoUrl:
-        "blob:https://drive.proton.me/163f8c88-386c-48df-a154-b7756404fc65",
+        "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZIKuVZ23pgWyNFgZvhnSX7qrmDUlVTGbzEjsJ1",
     },
     {
-      name: "FERNANDO",
-      title: `Singer, Owner of Q Studios`,
-      videoThumbnail: "/images/video-thumb-3.jpg",
+      name: "ANDRE SNOWDEN",
+      title: `R&B Singer`,
+      videoThumbnail: "/images/testimonials/Andre-Snowden.png",
       videoUrl:
-        "blob:https://drive.proton.me/163f8c88-386c-48df-a154-b7756404fc65",
+        "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZInUadm4TOEO3u2yHzoKwB5lckbj0PsIATZqF6",
+    },
+    {
+      name: "NUMINOUS THE BARD",
+      title: "Rapper",
+      videoThumbnail: "/images/testimonials/Numinous-The-Bard.png",
+      videoUrl:
+        "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZIsOr9IObMAEN48Y3Uiy6lF1m2pRjLq7wrZfua",
+    },
+    {
+      name: "DAVE MUTNER",
+      title: "Singer",
+      videoThumbnail: "/images/testimonials/Dave-Mutner.png",
+      videoUrl:
+        "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZIKuVZ23pgWyNFgZvhnSX7qrmDUlVTGbzEjsJ1",
     },
   ];
 
@@ -87,7 +101,6 @@ export default function RealStoriesVideos() {
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
   const scrollTo = useCallback(
     (index: number) => {
@@ -107,7 +120,7 @@ export default function RealStoriesVideos() {
     if (!emblaApi) return;
 
     emblaApi.on("select", onSelect);
-    setScrollSnaps(emblaApi.scrollSnapList());
+
     onSelect();
 
     return () => {
@@ -239,16 +252,16 @@ export default function RealStoriesVideos() {
 
           {/* Dot Indicators */}
           <div className="flex items-center gap-x-4">
-            {scrollSnaps.map((_, index) => (
+            {[0, 1, 2].map((dotIndex) => (
               <button
-                key={index}
-                onClick={() => scrollTo(index)}
+                key={dotIndex}
+                onClick={() => scrollTo(dotIndex)}
                 className={`w-5 h-5 rounded-full transition-all duration-300 ${
-                  selectedIndex === index
+                  selectedIndex % 3 === dotIndex
                     ? "bg-white"
                     : "bg-white/50 opacity-50 hover:opacity-80"
                 }`}
-                aria-label={`Go to slide ${index + 1}`}
+                aria-label={`Go to slide ${dotIndex + 1}`}
               />
             ))}
           </div>

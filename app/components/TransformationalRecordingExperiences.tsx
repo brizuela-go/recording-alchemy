@@ -3,7 +3,7 @@
 import React from "react";
 
 const video =
-  "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZIsOr9IObMAEN48Y3Uiy6lF1m2pRjLq7wrZfua";
+  "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZImYD17O1IaZQrnYCH4L8k1DxcAjEGtRFqiJVw";
 
 export default function TransformationalRecordingExperiences() {
   return (
@@ -19,7 +19,12 @@ export default function TransformationalRecordingExperiences() {
         </div>
         <div className="w-full max-w-6xl mt-16">
           <div>
-            <video src={video} controls className="w-full" />
+            <video
+              poster="/images/testimonials/Fernando Velazco.png"
+              src={video}
+              controls
+              className="w-full"
+            />
           </div>
         </div>
       </div>

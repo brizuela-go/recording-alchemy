@@ -1,5 +1,12 @@
+import { Metadata } from "next";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+
+export const metadata: Metadata = {
+  title: "Terms and Conditionss",
+  description:
+    "Welcome to Recording Alchemy! By purchasing, subscribing, or using our services, you agree to the following Terms and Conditions",
+};
 
 export default function TermsAndConditions() {
   return (

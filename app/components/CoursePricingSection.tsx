@@ -68,15 +68,19 @@ export default function CoursePricingSection() {
               <div className="mt-6 md:mt-8 w-full text-[#C9C9C9] text-xl md:text-2xl space-y-6">
                 <FeatureItem
                   iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/8e1299bd82d059f27972168958073fad8b9b7711?placeholderIfAbsent=true"
-                  text="Weekly Zoom calls, live demos, and Q&A sessions"
+                  text="Weekly Zoom calls"
+                />
+                <FeatureItem
+                  iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/8e1299bd82d059f27972168958073fad8b9b7711?placeholderIfAbsent=true"
+                  text="Live demos"
+                />
+                <FeatureItem
+                  iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/8e1299bd82d059f27972168958073fad8b9b7711?placeholderIfAbsent=true"
+                  text="Q&A sessions"
                 />
                 <FeatureItem
                   iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/09bddf14be79508a61cac353d380dba2ad07ffe5?placeholderIfAbsent=true"
                   text="Access to a private Discord community for feedback and collaboration"
-                />
-                <FeatureItem
-                  iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/7dc93c3a475bf251fe2272eead8036b719133e9b?placeholderIfAbsent=true"
-                  text="Starts at $750 for 3 months"
                 />
               </div>
             </div>
@@ -135,10 +139,6 @@ export default function CoursePricingSection() {
                   iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/4eba2aca5c4f3bdb94ced3f0870b42fe5b45db3c?placeholderIfAbsent=true"
                   text="Direct feedback on your music"
                 />
-                <FeatureItem
-                  iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/06a9a3931a027314702e77d6b54ebcdf26fa2ab5?placeholderIfAbsent=true"
-                  text="$1000/month"
-                />
               </div>
             </div>
 
@@ -170,7 +170,7 @@ export default function CoursePricingSection() {
           <div className="w-full max-w-xl">
             <div className="min-h-[312px] w-full">
               <GoldGradientText className="text-3xl md:text-4xl lg:text-5xl">
-                In-Studio Experience
+                2 Day VIP
               </GoldGradientText>
               <div className="mt-6 md:mt-8 w-full text-[#C9C9C9] text-xl md:text-2xl space-y-4">
                 <FeatureItem
@@ -179,11 +179,7 @@ export default function CoursePricingSection() {
                 />
                 <FeatureItem
                   iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/3c50d653a23249e1324ef43e91c80cf25ab00540?placeholderIfAbsent=true"
-                  text="Record a fully produced, mixed, and mastered song with me"
-                />
-                <FeatureItem
-                  iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/aa4ab290408f6596dc0880b02a8ee378a1acd403?placeholderIfAbsent=true"
-                  text="Starts at $2500"
+                  text="In just 2 days, we’ll produce, record, fully mix, and master one song—or as many as we can finish together."
                 />
               </div>
             </div>

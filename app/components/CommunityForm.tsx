@@ -3,6 +3,25 @@
 import React, { useState } from "react";
 import { cn } from "../../lib/utils";
 import Image from "next/image";
+import Link from "next/link";
+
+const companyLogos = [
+  {
+    src: "/images/companies/izotope.png",
+    alt: "Izotope",
+    href: "https://www.izotope.com/",
+  },
+  {
+    src: "/images/companies/ableton.png",
+    alt: "Ableton",
+    href: "https://www.ableton.com/",
+  },
+  {
+    src: "/images/companies/waves.png",
+    alt: "Waves",
+    href: "https://www.waves.com/",
+  },
+];
 
 export default function CommunityForm() {
   const [name, setName] = useState("");
@@ -11,7 +30,7 @@ export default function CommunityForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Social media URLs - kept empty as placeholders
-  const instagramUrl = "";
+  const instagramUrl = "https://instagram.com/jaminvandillen_";
   const youtubeUrl = "";
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -34,14 +53,35 @@ export default function CommunityForm() {
   };
 
   return (
-    <section className="w-full bg-black py-12 md:py-16 lg:py-20">
+    <section className="w-full bg-black py-12 md:py-16 max-sm:mt-20 lg:py-20">
       <div className="flex justify-center items-center pb-48 max-sm:px-10 -mt-32">
-        <Image
-          src={"/images/company-logos.png"}
-          alt="Company Logos"
-          height={1000}
-          width={1000}
-        />
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-48 gap-14">
+          {companyLogos.map((logo, index) => (
+            <Link
+              href={logo.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex justify-center items-center group "
+              key={index}
+            >
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={150}
+                height={150}
+                className={`object-contain
+                  group-hover:brightness-50  transition duration-200 ease-in-out
+                  ${
+                    logo.alt === "Waves"
+                      ? "h-28 w-28"
+                      : logo.alt === "Ableton"
+                      ? "h-64 w-64"
+                      : ""
+                  }`}
+              />
+            </Link>
+          ))}
+        </div>
       </div>
       <div className="max-w-7xl mx-auto flex justify-between items-start w-full px-4 sm:px-6 lg:px-8 flex-col md:flex-row gap-12 md:gap-8 lg:gap-16">
         {/* Left section - Form */}
@@ -130,7 +170,7 @@ export default function CommunityForm() {
 
         {/* Right section - Connect with me */}
         <div className="flex flex-col items-start w-full md:w-1/2">
-          <div className="flex flex-col sm:flex-row items-center md:items-end gap-0 sm:gap-2 w-full mb-10 md:mb-12 lg:mb-16">
+          <div className="flex flex-col xl:flex-row items-center xl:items-end gap-0 sm:gap-2 w-full mb-10 md:mb-12 lg:mb-16">
             <span className="font-inter text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-wider uppercase bg-gradient-to-r from-[#A87740] via-[#FFF3C2] to-[#A87740] bg-clip-text text-transparent">
               CONNECT
             </span>
@@ -139,7 +179,7 @@ export default function CommunityForm() {
             </span>
           </div>
 
-          <div className="flex flex-col gap-10 md:gap-12 lg:gap-16 w-full">
+          <div className="flex flex-col max-xl:justify-center max-xl:items-center max-xl:-ml-4 gap-y-10 md:gap-12 lg:gap-16 w-full">
             {/* Instagram */}
             <a
               href={instagramUrl || "#"}

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const items = [
   {
-    label: `© ${new Date().getFullYear()} ALCHEMY. All rights reserved`,
+    label: `© ${new Date().getFullYear()} Recording Alchemy. All rights reserved`,
     href: "",
   },
   {

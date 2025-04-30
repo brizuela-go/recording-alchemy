@@ -60,6 +60,12 @@ export default function FeaturesSection() {
     },
     {
       iconSrc: "/images/feature-icon-1.svg",
+      alt: "Mindset icon",
+      text: "Mindset & confidence-building techniques to help you own your sound",
+      highlight: "building techniques",
+    },
+    {
+      iconSrc: "/images/feature-icon-1.svg",
       alt: "Distribution icon",
       text: "How to distribute your music on streaming platforms",
       highlight: "distribute your music",
@@ -73,14 +79,8 @@ export default function FeaturesSection() {
     {
       iconSrc: "/images/feature-icon-1.svg",
       alt: "Film & TV icon",
-      text: "How to pitch your songs for film & TV placements",
-      highlight: "pitch your songs",
-    },
-    {
-      iconSrc: "/images/feature-icon-1.svg",
-      alt: "Mindset icon",
-      text: "Mindset & confidence-building techniques to help you own your sound",
-      highlight: "building techniques",
+      text: "Learn to create custom cover art for your music releases—no design experience needed",
+      highlight: "no design experience needed",
     },
   ] as FeatureItemProps[];
 

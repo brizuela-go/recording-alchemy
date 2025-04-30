@@ -19,37 +19,25 @@ export default function TestimonialsSection() {
       quote:
         "My music has elevated to a crazy level. I feel like now, with this training, my songs can stand next to the artists I look up to.",
       author: "Andre Snowden",
-      avatarSrc: "/images/testimonial-avatar-1.png",
+      avatarSrc: "/images/testimonials/Andre.png",
     },
     {
       quote:
         "This program saved me time, energy, and money—now I can create pro-level demos from my living room.",
       author: "Dave Mutner",
-      avatarSrc: "/images/testimonial-avatar-1.png",
+      avatarSrc: "/images/testimonials/Dave.png",
     },
     {
       quote:
         "He gave me templates I can now use for the rest of my recording career! They’ve saved me hours of work and helped me stay focused on creating music.",
       author: "Numinous The Bard",
-      avatarSrc: "/images/testimonial-avatar-1.png",
+      avatarSrc: "/images/testimonials/Numinous.png",
     },
     {
       quote:
-        "Jamin sat in on my sessions and helped bring the best out of me—he even helped me create a better hook for my song.",
-      author: "Fan",
-      avatarSrc: "/images/testimonial-avatar-1.png",
-    },
-    {
-      quote:
-        "I could always tell the difference between my mixes and professional ones—Jamin showed me exactly what I needed to level up.",
-      author: "Fan",
-      avatarSrc: "/images/testimonial-avatar-1.png",
-    },
-    {
-      quote:
-        "I went from not knowing how to record to making my own mixes and feeling confident in my sound.",
-      author: "Fan",
-      avatarSrc: "/images/testimonial-avatar-1.png",
+        "Jamin is a genius... I was mesmerized by his speed and sensitivity. I'm 42 years old, and you can imagine how many years I've been dreaming for this. And this guy made it a reality in just one night!",
+      author: "Fernando Velazco",
+      avatarSrc: "/images/testimonials/Fer.png",
     },
   ];
 
@@ -116,31 +104,36 @@ export default function TestimonialsSection() {
                 className="embla__slide flex-shrink-0 min-w-0 pl-4 sm:pl-5 md:pl-6 lg:pl-8 w-full sm:w-[85%] md:w-[42%] lg:w-[42.66%]"
               >
                 <div className="relative group">
-                  {/* Golden Border - Separate border element */}
                   <div className="p-[1px] rounded-sm">
                     <div
-                      className=" rounded-sm"
-                      style={{ boxShadow: "0 0 15px rgba(236, 199, 119, 0.3)" }}
+                      className="rounded-sm"
+                      style={{
+                        backgroundImage: 'url("/images/test-frame.png")',
+                        backgroundSize: "cover",
+                        backgroundRepeat: "no-repeat",
+                      }}
                     >
                       {/* Testimonial Content */}
-                      <div className=" bg-gradient-to-b from-[#1A1A1A] via-[#1A1A1A] to-[#1A1A1A/10]  flex flex-col items-center p-8 pb-20 lg:px-8 z-10 h-full">
-                        <div className="border-[1px] border-[#BC8431] lg:p-16 p-8">
-                          <p className="text-[#C9C9C9] text-base sm:text-lg md:text-xl font-normal leading-relaxed md:leading-[29px] self-stretch text-center mb-5 md:mb-7">
-                            {testimonial.quote}
-                          </p>
+                      <div className="flex flex-col items-center p-8 pb-20 lg:px-8 z-10 h-[500px] md:h-[550px] justify-between">
+                        <div className="border-[1px] border-[#BC8431] lg:p-16 p-8 flex flex-col flex-grow justify-between bg-[#151515ef]">
+                          <div className="flex justify-center items-center min-h-56">
+                            <p className="text-[#C9C9C9] text-base sm:text-lg md:text-xl font-normal leading-relaxed md:leading-[29px] mt-6 text-center mb-5 md:mb-7  overflow-hidden text-ellipsis line-clamp-6">
+                              {testimonial.quote}
+                            </p>
+                          </div>
 
                           <h4 className="font-cinzel text-xl md:text-2xl font-bold leading-tight md:leading-[42px] uppercase mt-auto text-gradient text-center">
                             {testimonial.author}
                           </h4>
                         </div>
 
-                        <div className="relative w-20 h-20 md:w-[95px] md:h-[83px] -mt-10  mb-[-44px] z-10">
+                        <div className="relative w-20 h-20 md:w-[95px] md:h-[83px] -mt-12 max-sm:-mt-6 mb-[-44px] z-10">
                           <Image
                             src={testimonial.avatarSrc}
                             alt={testimonial.author}
                             width={95}
                             height={83}
-                            className="object-contain object-center"
+                            className="object-contain object-center opacity-80"
                           />
                         </div>
                       </div>
