@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { cn } from "../../lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { toast } from "sonner";
 
 const companyLogos = [
   {
@@ -38,24 +39,45 @@ export default function CommunityForm() {
     if (!name || !email || !agreed) return;
 
     setIsSubmitting(true);
-    try {
-      // Handle form submission logic here
-      console.log({ name, email, agreed });
-      // Reset form after successful submission
-      setName("");
-      setEmail("");
-      setAgreed(false);
-    } catch (error) {
-      console.error("Error submitting form:", error);
-    } finally {
-      setIsSubmitting(false);
-    }
+
+    toast.promise(
+      new Promise<string>(async (resolve, reject) => {
+        try {
+          // Replace this with your actual POST request
+          const response = await fetch("/api/mailerlite/community", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, email, agreed }),
+          });
+
+          if (!response.ok) {
+            throw new Error("Failed to submit");
+          }
+
+          // Reset form on success
+          setName("");
+          setEmail("");
+          setAgreed(false);
+          resolve("Welcome to the community! Check your email");
+        } catch (error) {
+          console.error("Error submitting form:", error);
+          reject("Submission failed. Please try again.");
+        } finally {
+          setIsSubmitting(false);
+        }
+      }),
+      {
+        loading: "Submitting...",
+        success: (message: string) => message,
+        error: (err) => err,
+      }
+    );
   };
 
   return (
-    <section className="w-full bg-black py-12 md:py-16 max-sm:mt-20 lg:py-20">
+    <section className="w-full bg-black py-12 md:py-16  lg:py-20">
       <div className="flex justify-center items-center pb-48 max-sm:px-10 -mt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-48 gap-14">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-48 gap-y-14">
           {companyLogos.map((logo, index) => (
             <Link
               href={logo.href}
@@ -92,6 +114,7 @@ export default function CommunityForm() {
                 <input
                   type="text"
                   placeholder="Name"
+                  name="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="font-poppins text-xl md:text-2xl text-white capitalize w-full bg-transparent outline-none placeholder:text-white/80 transition-colors duration-300"
@@ -103,6 +126,7 @@ export default function CommunityForm() {
                 <input
                   type="email"
                   placeholder="Email"
+                  name="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="font-poppins text-xl md:text-2xl text-white w-full bg-transparent outline-none placeholder:text-white/80 transition-colors duration-300"

@@ -24,7 +24,7 @@ export default function TestimonialsSection() {
     {
       quote:
         "This program saved me time, energy, and money—now I can create pro-level demos from my living room.",
-      author: "Dave Mutner",
+      author: "Davey Harris",
       avatarSrc: "/images/testimonials/Dave.png",
     },
     {
@@ -117,7 +117,7 @@ export default function TestimonialsSection() {
                       <div className="flex flex-col items-center p-8 pb-20 lg:px-8 z-10 h-[500px] md:h-[550px] justify-between">
                         <div className="border-[1px] border-[#BC8431] lg:p-16 p-8 flex flex-col flex-grow justify-between bg-[#151515ef]">
                           <div className="flex justify-center items-center min-h-56">
-                            <p className="text-[#C9C9C9] text-base sm:text-lg md:text-xl font-normal leading-relaxed md:leading-[29px] mt-6 text-center mb-5 md:mb-7  overflow-hidden text-ellipsis line-clamp-6">
+                            <p className="text-[#C9C9C9] text-base sm:text-lg md:text-xl font-normal leading-relaxed md:leading-[29px] mt-6 text-center mb-5 md:mb-7  overflow-hidden ">
                               {testimonial.quote}
                             </p>
                           </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel, Inter, Poppins } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "sonner";
 
 const cinzel = Cinzel({
   variable: "--font-cinzel",
@@ -45,6 +46,18 @@ export default function RootLayout({
         className={`${cinzel.variable} ${poppins.variable} ${inter.variable} antialiased`}
         suppressHydrationWarning
       >
+        <Toaster
+          toastOptions={{
+            style: {
+              backgroundColor: "#000",
+              color: "#E3B887",
+              fontFamily: "Helvetica",
+              fontSize: "1.1rem",
+              borderColor: "#E3B887",
+            },
+          }}
+          position="top-center"
+        />
         {children}
       </body>
     </html>

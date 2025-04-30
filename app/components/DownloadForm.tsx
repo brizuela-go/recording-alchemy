@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { cn } from "../../lib/utils";
+import { toast } from "sonner";
 
 export default function DownloadForm() {
   const [name, setName] = useState("");
@@ -11,28 +12,43 @@ export default function DownloadForm() {
   const isFormValid =
     name.trim() !== "" && email.trim() !== "" && email.includes("@");
 
-  const handleSubmit = async (e: { preventDefault: () => void }) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!isFormValid) return;
+    if (!name || !email) return;
 
     setIsSubmitting(true);
-    try {
-      // Handle PDF download logic here
-      console.log({ name, email });
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      // Logic for successful download would go here
-      alert("Your PDF has been sent to your email!");
+    toast.promise(
+      new Promise<string>(async (resolve, reject) => {
+        try {
+          // Replace this with your actual POST request
+          const response = await fetch("/api/mailerlite/pdf-download", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, email }),
+          });
 
-      // Reset form after successful submission
-      setName("");
-      setEmail("");
-    } catch (error) {
-      console.error("Error submitting form:", error);
-    } finally {
-      setIsSubmitting(false);
-    }
+          if (!response.ok) {
+            throw new Error("Failed to submit");
+          }
+
+          // Reset form on success
+          setName("");
+          setEmail("");
+          resolve("Successfully submitted! Check your email");
+        } catch (error) {
+          console.error("Error submitting form:", error);
+          reject("Submission failed. Please try again.");
+        } finally {
+          setIsSubmitting(false);
+        }
+      }),
+      {
+        loading: "Submitting...",
+        success: (message: string) => message,
+        error: (err) => err,
+      }
+    );
   };
 
   return (
@@ -60,29 +76,28 @@ export default function DownloadForm() {
           </p>
         </div>
 
-        {/* Form Inputs - Larger size */}
+        {/* Form Inputs */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-5 sm:gap-6 lg:gap-[35px] w-full mt-8 md:mt-10 lg:mt-12">
-          {/* Name Input */}
           <input
             type="text"
             placeholder="Name"
+            name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
             className="form-input w-full lg:w-[432px] h-[65px] md:h-[75px] lg:h-[79px] p-3 sm:p-5 md:p-[20px] text-white font-poppins text-lg sm:text-xl md:text-2xl font-light capitalize border border-white bg-transparent flex-1 focus:outline-none focus:ring-1 focus:ring-[#BC8431] transition-all duration-300"
           />
 
-          {/* Email Input */}
           <input
             type="email"
             placeholder="Email"
+            name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="form-input w-full lg:w-[432px] h-[65px] md:h-[75px] lg:h-[79px] p-3 sm:p-5 md:p-[20px] text-white font-poppins text-lg sm:text-xl md:text-2xl font-light capitalize border border-white bg-transparent flex-1 focus:outline-none focus:ring-1 focus:ring-[#BC8431] transition-all duration-300"
+            className="form-input w-full lg:w-[432px] h-[65px] md:h-[75px] lg:h-[79px] p-3 sm:p-5 md:p-[20px] text-white font-poppins text-lg sm:text-xl md:text-2xl font-light border border-white bg-transparent flex-1 focus:outline-none focus:ring-1 focus:ring-[#BC8431] transition-all duration-300"
           />
 
-          {/* Download Button - Larger */}
           <button
             type="submit"
             disabled={!isFormValid || isSubmitting}

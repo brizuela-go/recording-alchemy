@@ -59,7 +59,7 @@ export default function RealStoriesVideos() {
         "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZIsOr9IObMAEN48Y3Uiy6lF1m2pRjLq7wrZfua",
     },
     {
-      name: "DAVE MUTNER",
+      name: "DAVEY HARRIS",
       title: "Singer",
       videoThumbnail: "/images/testimonials/Dave-Mutner.png",
       videoUrl:
@@ -80,7 +80,7 @@ export default function RealStoriesVideos() {
         "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZIsOr9IObMAEN48Y3Uiy6lF1m2pRjLq7wrZfua",
     },
     {
-      name: "DAVE MUTNER",
+      name: "DAVEY HARRIS",
       title: "Singer",
       videoThumbnail: "/images/testimonials/Dave-Mutner.png",
       videoUrl:

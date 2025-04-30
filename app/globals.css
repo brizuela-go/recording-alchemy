@@ -49,6 +49,28 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.text-gradient-underline {
+  background: linear-gradient(
+    180deg,
+    #bc8431a5 0%,
+    #ecc777a5 0%,
+    #fef7dfa5 0%,
+    #ecc777a5 0%,
+    #bc8431a5 0%,
+    #ecc777a5 0%,
+    #fef7dfa5 7.25%,
+    #ecc777a5 23.05%,
+    #bc8431a5 28.76%,
+    #ecc777a5 34.57%,
+    #fef7dfa5 53.11%,
+    #ecc777a5 64.72%,
+    #bc8431a5 79.76%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .bg-download-gradient {
   background: linear-gradient(
     270deg,
