@@ -5,6 +5,7 @@ import GoldGradientText from "./ui/gold-gradient-text";
 import FeatureItem from "./ui/feature-item";
 import DurationTab from "./ui/duration-tab";
 import SignUpButton from "./ui/sign-up-button";
+import Image from "next/image";
 
 interface PricingOption {
   duration: string;
@@ -98,7 +99,10 @@ export default function CoursePricingSection() {
         <div className="flex mt-16 md:mt-20 lg:mt-24 flex-col lg:flex-row items-start gap-x-16 gap-y-10">
           {/* Sticky image on the left */}
           <div className="w-full max-w-lg lg:sticky lg:top-24 self-start">
-            <img
+            <Image
+              width={1000}
+              height={1000}
+              priority
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/67de9199e8a195c04117167cdd34ff094c201561?placeholderIfAbsent=true"
               alt="Group Coaching"
               className="w-full aspect-[0.87] object-contain"
@@ -157,7 +161,10 @@ export default function CoursePricingSection() {
 
         {/* 1-on-1 Coaching */}
         <div className="flex mt-16 md:mt-20 lg:mt-24 flex-col lg:flex-row items-center gap-x-16 gap-y-10">
-          <img
+          <Image
+            width={1000}
+            height={1000}
+            priority
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/8c1753f4771bf7deea8b27dae94d1eb10839f660?placeholderIfAbsent=true"
             alt="1-on-1 Coaching"
             className="w-full max-w-lg aspect-[0.87] object-contain"
@@ -201,7 +208,10 @@ export default function CoursePricingSection() {
 
         {/* In-Studio Experience */}
         <div className="flex mt-16 md:mt-20 lg:mt-24 flex-col lg:flex-row items-center gap-x-16 gap-y-10">
-          <img
+          <Image
+            width={1000}
+            height={1000}
+            priority
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/ab779a3acbf74d97fc5080ab746237b12910c265?placeholderIfAbsent=true"
             alt="In-Studio Experience"
             className="w-full max-w-lg aspect-[0.87] object-contain"
@@ -244,7 +254,10 @@ export default function CoursePricingSection() {
         </div>
       </div>
 
-      <img
+      <Image
+        width={2000}
+        height={2000}
+        priority
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/7d006244475fa05eac96c31acb394c84819a925a?placeholderIfAbsent=true"
         alt="Divider"
         className="w-full object-contain mt-16 md:mt-20 lg:mt-24"

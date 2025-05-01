@@ -33,16 +33,17 @@ export default function Footer() {
       <ul className="flex justify-center items-center gap-8 max-sm:mt-10 text-center  max-sm:flex-col">
         {items.map(({ href, label }) => {
           return (
-            <Link
-              className={`text-white cursor-auto ${
-                href !== "" &&
-                "hover:underline hover:transition duration-200 ease-in-out hover:text-gradient cursor-pointer"
-              }`}
-              href={href}
-              key={label}
-            >
-              {label}
-            </Link>
+            <li key={label}>
+              <Link
+                className={`text-white cursor-auto ${
+                  href !== "" &&
+                  "hover:underline hover:transition duration-200 ease-in-out hover:text-gradient cursor-pointer"
+                }`}
+                href={href}
+              >
+                {label}
+              </Link>
+            </li>
           );
         })}
       </ul>

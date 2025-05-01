@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 interface FeatureItemProps {
   text: string;
@@ -13,7 +14,10 @@ export default function FeatureItem({
 }: FeatureItemProps) {
   return (
     <div className="flex w-full items-center gap-4">
-      <img
+      <Image
+        width={1000}
+        height={1000}
+        priority
         src={iconSrc}
         alt={"Note Logo"}
         className="w-5 h-4 object-contain flex-shrink-0"

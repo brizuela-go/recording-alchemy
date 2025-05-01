@@ -122,9 +122,9 @@ export default function TestimonialsSection() {
                             </p>
                           </div>
 
-                          <h4 className="font-cinzel text-xl md:text-2xl font-bold leading-tight md:leading-[42px] uppercase mt-auto text-gradient text-center">
+                          <p className="font-cinzel text-xl md:text-2xl font-bold leading-tight md:leading-[42px] uppercase mt-auto text-gradient text-center">
                             {testimonial.author}
-                          </h4>
+                          </p>
                         </div>
 
                         <div className="relative w-20 h-20 md:w-[95px] md:h-[83px] -mt-12 max-sm:-mt-6 mb-[-44px] z-10">
@@ -168,6 +168,7 @@ export default function TestimonialsSection() {
             {scrollSnaps.map((_, index) => (
               <React.Fragment key={index}>
                 <button
+                  aria-label={`Dot ${index + 1}`}
                   onClick={() => scrollTo(index)}
                   className={`w-[23px] h-[22px] flex items-center justify-center transition-all duration-300 ${
                     selectedIndex === index
