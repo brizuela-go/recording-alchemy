@@ -23,9 +23,9 @@ export default function TestimonialsSection() {
     },
     {
       quote:
-        "This program saved me time, energy, and money—now I can create pro-level demos from my living room.",
-      author: "Davey Harris",
-      avatarSrc: "/images/testimonials/Dave.png",
+        "Jamin is a genius... I was mesmerized by his speed and sensitivity. I'm 42 years old, and you can imagine how many years I've been dreaming for this. And this guy made it a reality in just one night!",
+      author: "Fernando Velazco",
+      avatarSrc: "/images/testimonials/Fer.png",
     },
     {
       quote:
@@ -35,9 +35,9 @@ export default function TestimonialsSection() {
     },
     {
       quote:
-        "Jamin is a genius... I was mesmerized by his speed and sensitivity. I'm 42 years old, and you can imagine how many years I've been dreaming for this. And this guy made it a reality in just one night!",
-      author: "Fernando Velazco",
-      avatarSrc: "/images/testimonials/Fer.png",
+        "This program saved me time, energy, and money—now I can create pro-level demos from my living room.",
+      author: "Davey Harris",
+      avatarSrc: "/images/testimonials/Dave.png",
     },
   ];
 
