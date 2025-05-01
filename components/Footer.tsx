@@ -30,23 +30,22 @@ export default function Footer() {
           />
         </Link>
       </div>
-      <ul className="flex justify-center items-center gap-8 max-sm:mt-10 text-center  max-sm:flex-col">
+      <div className="flex justify-center items-center gap-8 max-sm:mt-10 text-center  max-sm:flex-col">
         {items.map(({ href, label }) => {
           return (
-            <li key={label}>
-              <Link
-                className={`text-white cursor-auto ${
-                  href !== "" &&
-                  "hover:underline hover:transition duration-200 ease-in-out hover:text-gradient cursor-pointer"
-                }`}
-                href={href}
-              >
-                {label}
-              </Link>
-            </li>
+            <Link
+              key={label}
+              className={`text-white cursor-auto ${
+                href !== "" &&
+                "hover:underline hover:transition duration-200 ease-in-out hover:text-gradient cursor-pointer"
+              }`}
+              href={href}
+            >
+              {label}
+            </Link>
           );
         })}
-      </ul>
+      </div>
     </footer>
   );
 }
