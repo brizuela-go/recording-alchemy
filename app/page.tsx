@@ -1,16 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import AboutSection from "./components/AboutSection";
-import CommunityForm from "./components/CommunityForm";
-import CoursePricingSection from "./components/CoursePricingSection";
-import FeaturesSection from "./components/FeaturesSection";
-import Footer from "./components/Footer";
-import HeroSection from "./components/HeroSection";
-import InfiniteTestimonials from "./components/InfiniteTestimonials";
-import RealStoriesVideos from "./components/RealStoriesVideos";
-import TestimonialsSection from "./components/TestimonialsSection";
-import TransformationalRecordingExperiences from "./components/TransformationalRecordingExperiences";
+import AboutSection from "../components/AboutSection";
+import CommunityForm from "../components/CommunityForm";
+import CoursePricingSection from "../components/CoursePricingSection";
+import FeaturesSection from "../components/FeaturesSection";
+import Footer from "../components/Footer";
+import HeroSection from "../components/HeroSection";
+import InfiniteTestimonials from "../components/InfiniteTestimonials";
+import RealStoriesVideos from "../components/RealStoriesVideos";
+import TestimonialsSection from "../components/TestimonialsSection";
+import TransformationalRecordingExperiences from "../components/TransformationalRecordingExperiences";
 
 // Animation variants for section transitions
 const sectionVariants = {

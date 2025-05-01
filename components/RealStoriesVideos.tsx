@@ -216,9 +216,9 @@ export default function RealStoriesVideos() {
 
                   {/* Name and Title */}
                   <div className="text-center mt-16 w-full">
-                    <h4 className="font-inter text-2xl md:text-[34px] font-normal uppercase text-white">
+                    <p className="font-inter text-2xl md:text-[34px] font-normal uppercase text-white">
                       {testimonial.name}
-                    </h4>
+                    </p>
                     <p className="font-poppins text-base md:text-lg text-white opacity-50 mt-2 max-w-xs mx-auto">
                       {testimonial.title}
                     </p>
