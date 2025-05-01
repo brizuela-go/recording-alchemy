@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms and Conditionss",
@@ -215,12 +216,14 @@ export default function TermsAndConditions() {
             </h2>
             <p className="text-base md:text-lg">
               To request a refund or cancellation, please email us at{" "}
-              <a
+              <Link
                 href="mailto:jamin@recordingalchemy.com"
-                className="text-[#FBDDA3] hover:underline transition-all duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#e1a836] hover:underline transition-all duration-300"
               >
                 jamin@recordingalchemy.com
-              </a>{" "}
+              </Link>{" "}
               with your name, order details, and reason for the request. We aim
               to respond within 3 business days.
             </p>
