@@ -91,7 +91,7 @@ export default function CoursePricingSection() {
         </div>
 
         {/* Group Coaching */}
-        <div className="flex mt-16 md:mt-20 lg:mt-24 flex-col lg:flex-row items-start gap-x-16 gap-y-10">
+        <div className="flex mt-16 md:mt-20 lg:mt-24 flex-col lg:flex-row items-center gap-x-16 gap-y-10">
             <Image
               width={1000}
               height={1000}
