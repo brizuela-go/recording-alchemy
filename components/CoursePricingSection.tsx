@@ -45,15 +45,12 @@ export default function CoursePricingSection() {
     "Live demos of real recording techniques and workflows",
     "Q&A sessions to answer your questions in real time",
     "Access to a private Discord community for feedback and collaboration",
-    "All call replays available for the duration of your membership",
-    "Submit tracks for feedback each week",
     "Pre-recorded lessons on recording, vocal tuning, emotion, and more",
     "Step-by-step guide to setting up your room for pro-quality vocals",
     "Training on how to distribute your music on all streaming platforms",
     "Cover art design tutorials to create visuals that match your sound",
     "Special guest interviews with artists, engineers, and music pros",
     "Learn basic strategy for releasing music and building your brand",
-    "Designed for singers and rappers in any genre",
   ];
 
   const oneOnOneCoaching = [
