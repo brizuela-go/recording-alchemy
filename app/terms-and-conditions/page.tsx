@@ -22,7 +22,16 @@ export default function TermsAndConditions() {
           <h1 className="font-cinzel text-3xl md:text-4xl lg:text-5xl font-bold uppercase mb-4 bg-gradient-to-r from-[#A87740] via-[#FBDDA3] to-[#A87740] bg-clip-text text-transparent">
             Terms and Conditions
           </h1>
-          <time className="text-white text-lg">Effective Date: 4-26-25</time>
+          <time className="text-white text-lg">
+            Effective Date:{" "}
+            <span>
+              {new Date("2025-04-26").toLocaleDateString("en-US", {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </span>
+          </time>
         </div>
 
         {/* Welcome Section */}
