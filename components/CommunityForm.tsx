@@ -162,7 +162,7 @@ export default function CommunityForm() {
                   >
                     <span
                       className={cn(
-                        "w-6 h-5 mr-3 rounded border border-[#767676] transition-all duration-300 flex items-center justify-center",
+                        "w-8 sm:w-6 md:w-8 lg:w-6 h-5 mr-3 rounded border border-[#767676] transition-all duration-300 flex items-center justify-center",
                         agreed ? "bg-[#bc9160]" : "bg-white"
                       )}
                     >
