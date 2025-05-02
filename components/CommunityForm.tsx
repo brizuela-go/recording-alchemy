@@ -153,7 +153,7 @@ export default function CommunityForm() {
                     id="consent-checkbox"
                     checked={agreed}
                     onChange={() => setAgreed(!agreed)}
-                    className="sr-only" // Hidden but still accessible
+                    className="sr-only"
                     aria-checked={agreed}
                   />
                   <label
