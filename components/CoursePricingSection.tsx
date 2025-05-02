@@ -92,18 +92,14 @@ export default function CoursePricingSection() {
 
         {/* Group Coaching */}
         <div className="flex mt-16 md:mt-20 lg:mt-24 flex-col lg:flex-row items-start gap-x-16 gap-y-10">
-          {/* Sticky image on the left */}
-          <div className="w-full max-w-lg lg:sticky lg:top-24 self-start">
             <Image
               width={1000}
               height={1000}
               priority
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/67de9199e8a195c04117167cdd34ff094c201561?placeholderIfAbsent=true"
               alt="Group Coaching"
-              className="w-full aspect-[0.87] object-contain"
+              className="w-full max-w-lg aspect-[0.87] object-contain"
             />
-          </div>
-
           {/* Content scrolls normally */}
           <div className="w-full max-w-xl">
             <div className="min-h-[312px] w-full">
