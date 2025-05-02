@@ -5,6 +5,9 @@ import React from "react";
 const video =
   "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZImYD17O1IaZQrnYCH4L8k1DxcAjEGtRFqiJVw";
 
+const video2 =
+  "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZIhMahJX8wa204dHwgLUDif7Mtz8ehbcNXspxo";
+
 export default function TransformationalRecordingExperiences() {
   return (
     <section className="flex flex-col items-center justify-start py-20 ">
@@ -18,10 +21,16 @@ export default function TransformationalRecordingExperiences() {
           </h2>
         </div>
         <div className="w-full max-w-6xl mt-16">
-          <div>
+          <div className="flex flex-col justify-center items-center gap-y-20">
             <video
               poster="/images/testimonials/Fernando Velazco.png"
               src={video}
+              controls
+              className="w-full"
+            />
+            <video
+              poster="/images/testimonials/Mary Dee.png"
+              src={video2}
               controls
               className="w-full"
             />
