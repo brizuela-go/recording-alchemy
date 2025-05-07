@@ -44,16 +44,11 @@ export default function CoursePricingSection() {
     "Weekly Zoom coaching calls",
     "Live demos of real recording techniques and workflows",
     "Q&A sessions to answer your questions in real time",
-    "Access to a private Discord community for feedback and collaboration",
-    "All call replays available for the duration of your membership",
-    "Submit tracks for feedback each week",
     "Pre-recorded lessons on recording, vocal tuning, emotion, and more",
     "Step-by-step guide to setting up your room for pro-quality vocals",
     "Training on how to distribute your music on all streaming platforms",
     "Cover art design tutorials to create visuals that match your sound",
     "Special guest interviews with artists, engineers, and music pros",
-    "Learn basic strategy for releasing music and building your brand",
-    "Designed for singers and rappers in any genre",
   ];
 
   const oneOnOneCoaching = [
@@ -96,19 +91,15 @@ export default function CoursePricingSection() {
         </div>
 
         {/* Group Coaching */}
-        <div className="flex mt-16 md:mt-20 lg:mt-24 flex-col lg:flex-row items-start gap-x-16 gap-y-10">
-          {/* Sticky image on the left */}
-          <div className="w-full max-w-lg lg:sticky lg:top-24 self-start">
+        <div className="flex mt-16 md:mt-20 lg:mt-24 flex-col lg:flex-row items-center gap-x-16 gap-y-10">
             <Image
               width={1000}
               height={1000}
               priority
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/67de9199e8a195c04117167cdd34ff094c201561?placeholderIfAbsent=true"
               alt="Group Coaching"
-              className="w-full aspect-[0.87] object-contain"
+              className="w-full max-w-lg aspect-[0.87] object-contain"
             />
-          </div>
-
           {/* Content scrolls normally */}
           <div className="w-full max-w-xl">
             <div className="min-h-[312px] w-full">
