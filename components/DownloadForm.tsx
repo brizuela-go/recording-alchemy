@@ -65,7 +65,8 @@ export default function DownloadForm() {
           </h2>
 
           <p className="font-sans text-lg sm:text-xl md:text-2xl lg:text-[24px] leading-relaxed md:leading-[146%] text-white text-center mt-1 md:mt-2">
-            Download My Pro Vocal Chain Starter Kit (Free PDF)
+            Download My Pro Vocal Chain{" "}
+            <span className=" font-medium">(Free PDF)</span>
           </p>
 
           <p className="font-sans text-sm sm:text-base md:text-lg lg:text-[18px] leading-relaxed md:leading-[146%] text-white text-center w-full max-w-5xl mt-1 md:mt-2">
