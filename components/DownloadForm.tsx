@@ -68,7 +68,7 @@ export default function DownloadForm() {
           </h2>
 
           <p className="font-sans text-lg sm:text-xl md:text-2xl lg:text-[24px] leading-relaxed md:leading-[146%] text-white text-center mt-1 md:mt-2">
-            Join My Free Vocal
+            Join My Free Vocal{" "}
             <span className=" font-medium">Recording Masterclass</span>
           </p>
 
