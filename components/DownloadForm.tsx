@@ -3,11 +3,13 @@
 import React, { useState } from "react";
 import { cn } from "../lib/utils";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 export default function DownloadForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter();
 
   const isFormValid =
     name.trim() !== "" && email.trim() !== "" && email.includes("@");
@@ -36,6 +38,7 @@ export default function DownloadForm() {
           setName("");
           setEmail("");
           resolve("Successfully submitted! Check your email");
+          router.push("/free-masterclass");
         } catch (error) {
           console.error("Error submitting form:", error);
           reject("Submission failed. Please try again.");
@@ -65,15 +68,16 @@ export default function DownloadForm() {
           </h2>
 
           <p className="font-sans text-lg sm:text-xl md:text-2xl lg:text-[24px] leading-relaxed md:leading-[146%] text-white text-center mt-1 md:mt-2">
-            Download My Pro Vocal Chain{" "}
-            <span className=" font-medium">(Free PDF)</span>
+            Join My Free Vocal
+            <span className=" font-medium">Recording Masterclass</span>
           </p>
 
           <p className="font-sans text-sm sm:text-base md:text-lg lg:text-[18px] leading-relaxed md:leading-[146%] text-white text-center w-full max-w-5xl mt-1 md:mt-2">
-            Get the exact Ableton vocal chain I use to help artists sound
-            radio-ready — all in one easy-to-follow PDF. Whether you&apos;re
-            just starting out or looking to refine your sound, this guide will
-            give you the tools to make your vocals shine like the pros.
+            Learn the exact line-by-line vocal recording techniques I use to get
+            radio-ready vocals — all explained step-by-step in this free
+            masterclass. Whether you&apos;re just starting out or want to refine
+            your vocal takes, this session will give you the confidence and
+            skills to nail every performance
           </p>
         </div>
 
@@ -108,7 +112,7 @@ export default function DownloadForm() {
                 "opacity-70 cursor-not-allowed hover:opacity-70 active:translate-y-0"
             )}
           >
-            {isSubmitting ? "Sending..." : "Download PDF"}
+            {isSubmitting ? "Reserving..." : "Reserve My Spot"}
           </button>
         </div>
       </div>
