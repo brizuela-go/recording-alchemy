@@ -77,7 +77,7 @@ export default function DownloadForm() {
             radio-ready vocals — all explained step-by-step in this free
             masterclass. Whether you&apos;re just starting out or want to refine
             your vocal takes, this session will give you the confidence and
-            skills to nail every performance
+            skills to nail every performance.
           </p>
         </div>
 
