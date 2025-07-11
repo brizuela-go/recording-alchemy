@@ -6,11 +6,21 @@
   --background-end-rgb: 0, 0, 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
 }
 
+@media (max-width: 430px) {
+  .lotext {
+    line-height: 1.5;
+    font-size: 0.875rem; /* 14px */
+  }
+}
 /* Hero Section Styles */
 .bg-hero-gradient {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 82.52%, #000 100%),
@@ -108,4 +118,8 @@ html {
       transform: translate(calc(-50% - 0.5rem));
     }
   }
+}
+
+button {
+  @apply cursor-pointer disabled:cursor-not-allowed;
 }
