@@ -17,9 +17,9 @@ export default function TestimonialsSection() {
   const testimonials: Testimonial[] = [
     {
       quote:
-        "My music has elevated to a crazy level. I feel like now, with this training, my songs can stand next to the artists I look up to.",
-      author: "Andre Snowden",
-      avatarSrc: "/images/testimonials/Andre.png",
+        "After working with Jamin... getting more emotion, learning to mix and master, it's a whole different level!",
+      author: "J0shh",
+      avatarSrc: "/images/testimonials/Josh-Testimonial.png",
     },
     {
       quote:

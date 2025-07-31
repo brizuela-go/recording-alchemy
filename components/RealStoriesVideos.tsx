@@ -45,11 +45,11 @@ export default function RealStoriesVideos() {
   // Video testimonials data
   const videoTestimonials: VideoTestimonial[] = [
     {
-      name: "ANDRE SNOWDEN",
-      title: `R&B Singer`,
-      videoThumbnail: "/images/testimonials/Andre-Snowden.png",
+      name: "J0shh",
+      title: `Singer`,
+      videoThumbnail: "/images/testimonials/Josh.png",
       videoUrl:
-        "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZInUadm4TOEO3u2yHzoKwB5lckbj0PsIATZqF6",
+        "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZIr1dOwfbEvaHMLIiowJ3uWKed1fnRObqpFx5h",
     },
     {
       name: "NUMINOUS THE BARD",
@@ -66,11 +66,11 @@ export default function RealStoriesVideos() {
         "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZIKuVZ23pgWyNFgZvhnSX7qrmDUlVTGbzEjsJ1",
     },
     {
-      name: "ANDRE SNOWDEN",
-      title: `R&B Singer`,
-      videoThumbnail: "/images/testimonials/Andre-Snowden.png",
+      name: "J0shh",
+      title: `Singer`,
+      videoThumbnail: "/images/testimonials/Josh.png",
       videoUrl:
-        "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZInUadm4TOEO3u2yHzoKwB5lckbj0PsIATZqF6",
+        "https://qs882kideu.ufs.sh/f/4Kr24oUHKyZIr1dOwfbEvaHMLIiowJ3uWKed1fnRObqpFx5h",
     },
     {
       name: "NUMINOUS THE BARD",
